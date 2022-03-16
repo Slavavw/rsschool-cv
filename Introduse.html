@@ -4,13 +4,25 @@
     <meta charset="UTF-8">
     <title>Introduce myself</title>
     <link href="stylereset.css" rel="stylesheet">
+    <script type="text/javascript">
+        function CalculateXY(){
+            let img =document.querySelector(".main img");
+            let div = document.querySelector(".main .info1");
+            let calculateTop = img.offsetHeight+img.offsetTop - div.offsetTop;
+            div.style['padding-top'] = `${calculateTop}px`;
+            document.querySelector('footer').textContent = String.fromCharCode(0x270c);
+        }
+    </script>
 </head>
-<body>
+<body onload="CalculateXY()">
     <div class="main">
         <img src="images/avatar.jpg" width="25%" height="30%" alt="people face"  style="border: 1px solid black; float: left;" >
         <h1>Personal Data of Mikhailovsky Viacheslav</h1>
-        <p><h2>Softwear engener</h2></p>
-
+        <h2>Softwear engener</h2>
+        <div class = 'info1'><footer></footer></div>
+        <div style="padding-top: 10px;">
+        <p class='contact'style="float: left;"><strong>Contact</strong> <br> Minsk, Belarus <br> <a href="#">slavavw1978@gmail.com</a></p>        
+        </div>
     </div>   
     
 

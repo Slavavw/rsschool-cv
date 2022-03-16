@@ -63,14 +63,35 @@ table {
 html {	
 	font-family: 'PTSans',Arial,sans-serif;
 	font-size: 62.5%;
-	background: rgb(225,238,253);
+	background: rgb(225,238,253) url(file:///E:/RS%20School/rsschool-cv/images/bg_body.png) repeat-x;
 }
 .main {
 	max-width: 750px;
 	margin: auto;
-	padding: 10px 0;
+	padding: 10px 10px;
 	border: 4px solid white;
 	height:600px;
 	background: transparent url(file:///E:/RS%20School/rsschool-cv/images/bg_body.png) no-repeat;	
-	color: rgb(199, 199, 116);
+	color: rgb(199, 199, 116);	
 }
+h1 {
+	font-size: 1.8em;
+}
+h2 {
+	font-size: 1.6em;
+}
+.info1 {
+	background-color: #f8e430;
+	font-size: 2em;
+	color: rgb(34, 128, 235);
+}
+div p, a {
+	color: rgb(34, 128, 235); font-size: 1.3em; 
+}
+
+/*p {
+	font-size: 1.5em;
+	color: rgb(34, 128, 235);
+}
+a {color: rgb(34, 128, 235);}
+b {font-weight: bold;font-size: 1.5em;color: rgb(34, 128, 235);}*/
