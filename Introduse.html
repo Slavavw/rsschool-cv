@@ -5,34 +5,68 @@
     <title>Introduce myself</title>
     <link href="stylereset.css" rel="stylesheet">
     <script type="text/javascript">
-        function CalculateXY(){
-            let img =document.querySelector(".main img");
-            let div = document.querySelector(".main .info1");
-            let calculateTop = img.offsetHeight+img.offsetTop - div.offsetTop;
-            div.style['padding-top'] = `${calculateTop}px`;
-            document.querySelector('footer').textContent = String.fromCharCode(0x270c);
-        }
+        function CalculateXY(type ='img'){ let img, div, calculateTop;
+            switch (type) {
+                case 'img': 
+                    img =document.querySelector(".main img");
+                    div = document.querySelector(".main .info1");
+                    calculateTop = img.offsetHeight+img.offsetTop - div.offsetTop;
+                    div.style['padding-top'] = `${calculateTop}px`;
+                    document.querySelector('footer').textContent = String.fromCharCode(0x270c);
+                    break;
+                    case 'p':
+                        img = document.querySelector('div+p');
+                        div = document.querySelector('.main');
+                        let rect1 = img.getBoundingClientRect().height, rect2 = div.getBoundingClientRect().height;
+                        let percent = Math.ceil( rect1/rect2*100);                        
+                        /*calculateTop = img.clientHeight + img.clientTop;*/
+                        document.querySelector('.sidebar').style['height'] =`${percent}%`;
+                        img.height = `${percent}%`;
+                        break;
+            }            
+        }        
     </script>
 </head>
-<body onload="CalculateXY()">
+<body onload="CalculateXY('img'),CalculateXY('p')">
     <div class="main">
         <img src="images/avatar.jpg" width="25%" height="30%" alt="people face"  style="border: 1px solid black; float: left;" >
         <h1>Personal Data of Mikhailovsky Viacheslav</h1>
         <h2>Softwear engener</h2>
         <div class = 'info1'><footer></footer></div>
-        <div style="padding-top: 10px;">
-        <p class='contact'style="float: left;"><strong>Contact</strong> <br> Minsk, Belarus <br> <a href="#">slavavw1978@gmail.com</a></p>        
-        </div>
-    </div>   
-    
+        <div class ='sidebar'>        
+            <p class='contact'style="float: left;">
+                <strong>Contact</strong> <br> Minsk, Belarus <br> <a href="#signupForm">slavavw1978@gmail.com</a></p>        
+        </div>        
+            <p style="min-height:171px;">Глава государства уверен, что для граждан нет необходимости «бегать по «завуголлю», по закоулкам», чтобы где-то обменять рубли на доллары. «Ну, выменяли, нахватались. Сейчас этот доллар уже потихоньку начинает проседать. Потому что никому не нужен. Особенно в связи с этими санкциями, которые введены против нас», – сказал Александр Лукашенко.
+            </p>
+            <form class = 'signupForm'>
+                <label for='email' style="display: inline;" >E-mail</label>
+                <input type="email" id ='email' style="padding-bottom: 5px; display: block;" ><br>
+                <textarea cols ='25' rows ='5'></textarea><br>
+                <input class="btn" type ='submit' value = 'Send'>
+            </form>
 
-<!---
-
-    <div class = 'main'>        
-        <img src="images/avatar.jpg" width="15%" height="15%" alt="people face"  style="border: 1px solid black; float: left;" >
-        <strong>Personal Data of Mikhailovsky Viacheslav</strongh2> <br>Softwear engener
-    </div>
--->
+    </div>    
 </body>
+<script type="text/javascript">
+    let OnLoad = function(){         
+            let a_href = document.querySelector('.sidebar p a');
+            a_href.addEventListener("click",(ev)=>{
+                ev.preventDefault(); ev.stopPropagation();
+                let form= document.querySelector('.signupForm');
+                form.style.display ='block';
+            });
+            let inputText = document.querySelector('.signupForm textarea');
+            inputText.addEventListener('keypress',CheckKey);
+            function CheckKey(ev){
+                let res = ev.target.value
+                if(! /^Dear friend\'s/g.test(ev.target.value) ){
+                    ev.target.value = "Dear friend\'s " + ev.target.value;
+                }
+            }
+
+        }
+    document.addEventListener('load',OnLoad());
+</script>
 </html>
 
