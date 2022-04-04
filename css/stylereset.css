@@ -27,6 +27,7 @@
 	font-style: italic;
 }
 /* сброс стилей браузера */
+/* сброс стилей браузера */
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
@@ -42,7 +43,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 body {
 	line-height: 1.2;
-	min-width: 500px;	
 }
 ol { 
 	padding-left: 1.4em;
@@ -56,21 +56,5 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 } 
+
 /* конец кода сброса стилей браузера */
-*{
-	box-sizing: border-box;	
-}
-html {	
-	font-family: 'PTSans',Arial,sans-serif;
-	font-size: 62.5%;
-	background: rgb(225,238,253);
-}
-.main {
-	max-width: 750px;
-	margin: auto;
-	padding: 10px 0;
-	border: 4px solid white;
-	height:600px;
-	background: transparent url(file:///E:/RS%20School/rsschool-cv/images/bg_body.png) no-repeat;	
-	color: rgb(199, 199, 116);
-}

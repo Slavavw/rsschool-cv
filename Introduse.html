@@ -1,26 +1,117 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>Introduce myself</title>
-    <link href="stylereset.css" rel="stylesheet">
-</head>
-<body>
-    <div class="main">
-        <img src="images/avatar.jpg" width="25%" height="30%" alt="people face"  style="border: 1px solid black; float: left;" >
-        <h1>Personal Data of Mikhailovsky Viacheslav</h1>
-        <p><h2>Softwear engener</h2></p>
-
-    </div>   
-    
-
-<!---
-
-    <div class = 'main'>        
-        <img src="images/avatar.jpg" width="15%" height="15%" alt="people face"  style="border: 1px solid black; float: left;" >
-        <strong>Personal Data of Mikhailovsky Viacheslav</strongh2> <br>Softwear engener
-    </div>
--->
-</body>
+    <title>Base page</title>
+    <link rel=" ='stylesheet" href="/css/stylereset.css">
+    <link rel="stylesheet" href="css/fonts.css">  
+    <link rel="stylesheet"  href="css/styles.css"> 
+    <link rel ='stylesheet' href="../rsschool-cv/css/page1.css">    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src='/js/prim1.js' type ='text/javascript' ></script>
+    <script src='../rsschool-cv/js/main.js' type ='text/javascript' defer></script>
+    <meta charset="utf-8">
+    <meta name="language" content="ru">
 </html>
-
+<body>    
+    <header>
+        <img src ="images/favicon.png"  width="101" height="101" alt="Логотип" class = 'banner'>
+        <script defer ='defer' src ="main.js"></script>
+        <h1>My Studies at RS-SChool</h1>
+        <div>
+            <nav class = "rightMenu">
+                <ul class = 'menuBtn'>
+                    <li><a href="#">Chapter1</a></li>
+                    <li><a href="#">Chapter2</a></li>
+                    <li><a href="#">Chapter3</a></li>
+                    <li><a href="#">Chapter14</a></li>
+                </ul>
+            </nav>
+            <div class = "mainMenu">   
+                <div>
+                    <ul>
+                        <li><a href="#popup_menu">Lesson 1</a></li>
+                        <li><a href="#popup_menu">Lesson 2</a></li>
+                        <li><a href="#popup_menu">Lesson 3</a></li>                        
+                    </ul>
+                </div>                     
+                <div class ="subMenu">                     
+                    <a href="#" alt="Search"><input type ="search" class="search_folder">🔍</a>                    
+                </div>                
+            </div>
+        </div>
+    </header>
+    <div class ='popup_menu'>
+        <div class = 'popup1'>            
+                <ul>
+                    <li><a href="#">Конвертер</a></li>
+                    <li><a href="#">Курсы НБРБ</a></li>
+                    <li><a href="#">Курсы ЦБРФ</a></li>
+                    <li><a href="#">Торги БВФБ</a></li>
+                    <li><a href="#">Торги БВФБ</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Курс доллара</a></li>
+                    <li><a href="#">Курс евро</a></li>
+                    <li><a href="#">Курс рубля</a></li>
+                    <li><a href="#">Доллар/Рубль</a></li>
+                    <li><a href="#">Евро/Доллар</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Минск</a></li>
+                    <li><a href="#">Брест</a></li>
+                    <li><a href="#">Витебск</a></li>
+                    
+                </ul>
+                <ul>
+                    <li><a href="#">Курсы криптовалют</a></li>
+                    <li><a href="#">Курс Bitcoin</a></li>
+                    <li><a href="#">Курс Ethereum</a></li>                    
+                </ul>            
+        </div>
+        <div class = 'popup2'>            
+            <ul>
+                <li><a href="#">Потребительские</a></li>
+                <li><a href="#">Калькулятор</a></li>
+                <li><a href="#">Онлайн заявка на кредит</a></li>
+                <li><a href="#">Рефинансирование кредитов</a></li>
+                <li><a href="#">Наличными</a></li>
+                <li><a href="#">Без справок</a></li>
+                <li><a href="#">Для пенсионеров</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">На жилье</a></li>
+                <li><a href="#">Калькулятор</a></li>
+                <li><a href="#">Льготные</a></li>
+                <li><a href="#">На строительство жилья</a></li>
+                <li><a href="#">На покупку квартиры</a></li>
+                <li><a href="#">Ипотека</a></li>
+                <li><a href="#">На 10 лет</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Автокредиты</a></li>
+                <li><a href="#">Калькулятор</a></li>
+                <li><a href="#">Без первоначального взноса</a></li>
+                <li><a href="#">На новое авто</a></li>
+                <li><a href="#">На подержанное авто</a></li>                
+            </ul>
+            <ul>
+                <li><a href="#">Для бизнеса</a></li>
+                <li><a href="#">Для малого бизнеса</a></li>
+                <li><a href="#">Для юридических лиц</a></li>
+                <li><a href="#">На бизнес с нуля</a></li>
+                <li><a href="#">Для ИП</a></li>
+                <li><a href="#">Заявка на РКО</a></li>
+                <li><a href="#">Расчётно-кассовое обслуживание</a></li>
+                <li><a href="#">Мастер подбора РКО</a></
+            </ul>            
+    </div>
+    </div>
+    <article>
+        <div class = "photo_myself">
+            <figure><img src="../rsschool-cv/images/avatar.jpg" alt ='аватарка'></figure>
+            <span><b>Viacheslav Mikhaylovskiy</b><br>
+            softwear engener</span>
+            <nav></nav>
+        </div>
+        <p> Дата рождения: 04.02.1978г <br> возраст: 44</p>
+    </article>
+</body>
